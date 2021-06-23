@@ -13,14 +13,10 @@ public class GameDirector : MonoBehaviour
         this.EncounterGauge = GameObject.Find("EncounterGauge");
     }
 
-    public void move()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
+        //화면 움직이는 것 추가 필요.
         currentEncountTime += 0.003f;
         this.EncounterGauge.GetComponent<Image>().fillAmount = currentEncountTime;
         if (currentEncountTime >= 0.8f)
